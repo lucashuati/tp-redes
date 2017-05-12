@@ -19,7 +19,7 @@ def ascii2bin (text, encoding='utf-8', errors='surrogatepass'):
 # Socket para receber a mensagem da camada de aplicacao
 sa = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 host = "127.0.0.1"
-port = 8029
+port = 8034
 sa.bind((host, port))
 
 sa.listen(1)
@@ -135,10 +135,11 @@ print msg2
 s.close
 
 
-# Socket para enviar a mensagem da camada de aplicacao
+# Socket para enviar a mensagem para a camada de aplicacao
 
 print 'Conectado com a camada de Aplicacao'
 f = open('http.txt', 'r')
 print f.read()
+ca.send(f.read());
 ca.close
 sa.close
