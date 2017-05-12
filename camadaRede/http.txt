@@ -1,10 +1,11 @@
-GET / HTTP/1.1
-Host: localhost:2008
+HTTP/1.1 200 OK
+Date: Fri, 12 May 2017 15:11:03 GMT
 Connection: keep-alive
-Cache-Control: max-age=0
-Upgrade-Insecure-Requests: 1
-User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
-Accept-Encoding: gzip, deflate, sdch, br
-Accept-Language: pt-BR,pt;q=0.8,en-US;q=0.6,en;q=0.4,es;q=0.2
-Cookie: django_language=en; Webstorm-57cb5deb=932e0b25-83b1-4092-9184-1fd6324300c0; csrftoken=7OZBXgMPs87bK8i31vpQe8RLZCM53HFkyUXiXhqrsqE7IMgobT2y1KMIPreQsNyG
+Transfer-Encoding: chunked
+
+a4
+<h1 style="text-align: center">Trabalho de Redes - Pilha TCP/IP</h1>
+<p style="text-align: center">Foi realizada a comunicação com o Server através da pilha</p>
+
+0
+
