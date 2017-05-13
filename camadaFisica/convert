@@ -1,0 +1,10 @@
+HTTP/1.1 200 OK
+Date: Sat, 13 May 2017 14:54:19 GMT
+Connection: keep-alive
+Transfer-Encoding: chunked
+
+a4
+<h1 style="text-align: center">Trabalho de Redes - Pilha TCP/IP</h1>
+<p style="text-align: center">Foi realizada a comunicação com o Server através da pilha</p>
+
+0
