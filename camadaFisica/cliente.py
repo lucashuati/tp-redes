@@ -41,7 +41,7 @@ def sendFrame(data,s):
     print host
     if str(host) is not '127.0.0.1': # Caso de uso no local host
         print 'ok'
-        pid = Popen(["arp", "-a"], stdout=PIPE)
+        pid = Popen(["arp", "-a", host], stdout=PIPE)
     else:
         pid = Popen(["arp", "-a"], stdout=PIPE)
     ms = pid.communicate()[0]
@@ -165,7 +165,7 @@ data = ca.recv(1024).decode("ascii")
 
 
 host = "127.0.0.1"
-port = 8031
+port = 8098
 
 socketFF = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 socketFF.connect((host,port))
