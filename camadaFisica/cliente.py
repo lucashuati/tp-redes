@@ -83,7 +83,7 @@ def sendFrame(data,s):
 
     # Verifica o tamanho do arquivo
     fsize = getSize(message)
-    message.seek(0)
+    message.seek(0)                                     
 
     # numero de caracteres no arquivo
     number_chars = fsize + 1
@@ -154,17 +154,18 @@ def reciveFrame(c):
 
 # Socket para receber a mensagem da camada de aplicacao
 sa = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-host = "192.168.0.4"
-port = 7897
+host = "127.0.0.1"
+port = 8043
 sa.bind((host, port))
 
 print 'Conectado com a camada de Aplicacao'
 sa.listen(50)
 ca, addr = sa.accept()
+print 'got here\n'
 data = ca.recv(1024).decode("ascii")
 
 
-host = "127.0.0.1"
+host = "172.16.17.143"
 port = 8031
 
 socketFF = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -172,8 +173,13 @@ socketFF.connect((host,port))
 
 sendFrame(data,socketFF)
 resp = reciveFrame(socketFF)
+print resp
 # Retira cabecalho e decodifica para mandar para o server
 pdu = resp.split('\n')
 m = str(pdu[2])
 msg2 = decode_binary_string(m)
-ca.send(msg2)
+# ca.send(msg2)
+print msg2
+sn = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+sn.connect(("127.0.0.1",7123))
+sn.send(msg2)

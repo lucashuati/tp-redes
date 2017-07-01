@@ -154,7 +154,11 @@ def reciveFrame(c):
     return frame
 
 # Criacao Socket cliente - server (FISICA)
+<<<<<<< HEAD
 host = "172.16.17.143"
+=======
+host = "172.16.17.141"
+>>>>>>> b14480e0c5f5ab2a60cba840beeb0cacd42ceeb5
 port = 8031
 
 s = socket.socket()
@@ -171,7 +175,11 @@ msg2 = decode_binary_string(m)
 
 # Criar Socket para comunicacao APP - FISICA
 socketAF = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+<<<<<<< HEAD
 host = "172.16.17.143"
+=======
+host = "127.0.0.1"
+>>>>>>> b14480e0c5f5ab2a60cba840beeb0cacd42ceeb5
 port = 7897
 socketAF.connect((host, port))
 
