@@ -154,7 +154,7 @@ def reciveFrame(c):
 
 # Socket para receber a mensagem da camada de aplicacao
 sa = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-host = "127.0.0.1"
+host = "192.168.0.4"
 port = 7897
 sa.bind((host, port))
 
