@@ -1,7 +1,7 @@
 require 'socket'
 include Socket::Constants
 
-Port_phy_conn = 8043
+Port_phy_conn = 8040
 Port_tra_conn = 7502
 Destination = "172.16.17.143"
 Host = '127.0.0.1'
