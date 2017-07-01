@@ -1,10 +1,10 @@
 require 'socket'
 include Socket::Constants
 
-Port_phy_conn = 7880
-Port_tra_conn = 7891
-Destination = "172.16.17.141"
-Host = '172.16.17.143'
+Port_phy_conn = 8040
+Port_tra_conn = 7502
+Destination = "172.16.17.143"
+Host = '127.0.0.1'
 #Making connectio via socket
 
 puts "Quantas redes farao parte da tabela de roteamento"
@@ -24,7 +24,7 @@ end
 # end
 
 
-socket_1 = TCPServer.new(Host,Port_phy_conn)
+socket_1 = TCPServer.new(Host,Port_tra_conn)
 
 puts "waiting..."
 
@@ -51,7 +51,7 @@ loop{
 		end 
 
 		socket_2 = Socket.new(AF_INET, SOCK_STREAM, 0)
-		socketaddr = Socket.pack_sockaddr_in(Port_tra_conn, '127.0.0.1')
+		socketaddr = Socket.pack_sockaddr_in(Port_phy_conn, Host)
 		socket_2.connect(socketaddr)
 
 		puts "Connected with destination"
